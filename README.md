@@ -1,24 +1,49 @@
-# shopping
+# vue仿电商项目
 
-## Project setup
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 运行服务
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 打包
 ```
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+### 项目介绍
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+使用Vuex和VueRouter
+路由使用html5的history模式
+使用导航守卫来改变当前网页标题
+使用导航守卫定位到顶部
+使用了Vuex管理数据
+
+1. 有筛选和排序两种过滤方法
+   1.1 价格有升序和降序, 销量只有降序
+2. 初次打开商品列表页会请求一次远程数据(用setTimeout模拟)
+
+3. 列表页主要有两个模块，
+   3.1 路由组件负责数据的请求，过滤相关的逻辑
+   3.2 商品简介组件,每个商品卡片，鼠标经过时，显示加入购物车的按钮
+
+##### 商品简介组件
+
+​	1.每个商品选项较多，为方便传递，直接设置一个property: info来接收一个对象格式的数据
+
+​	2.鼠标悬停在卡片上时会显示加入购物车按钮
+
+##### 商品详情页
+
+
+​	1.商品详情的路由接收一个参数id
+
+##### 购物车
+
+​	1.列出购物清单，显示商品信息，控制购买数量
+
+​    2. 对总费用进行计算
